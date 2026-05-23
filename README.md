@@ -28,7 +28,7 @@ A flexible cleaning mechanism has been established to seamlessly integrate varyi
 To supply the B2C and B2B visual interfaces, high-value analytical dimensions are engineered from the raw dataset before exporting the clean data to `cleaned_beauty_products.csv`:
 * **Binary Skin Type Matrix Expansion:** Raw single-column text values for skin types (Dry, Oily, Sensitive, Combination, Normal) are expanded into 5 distinct binary columns (0 or 1 values) to seamlessly feed the multi-faceted B2C sidebar filter checkboxes.
 * **Active Ingredient (Main Ingredient) Extraction:** Product ingredient lists are programmatically scanned to isolate high-value active ingredients like Retinol, Niacinamide, Salicylic Acid, Hyaluronic Acid, Vitamin C, Ceramides, Aloe Vera, and Shea Butter. In datasets where ingredient lists are missing, highly realistic formulas are synthesized dynamically based on brand tier and category.
-* **Target Audience Classification:** Gender target data ("Gender_Target") is mapped to uniform "Kadin" (Female), "Erkek" (Male), and "Unisex" labels to align with standard cosmetic market segments.
+* **Target Audience Classification:** Gender target data ("Gender_Target") is mapped to uniform "Female","Male" and "Unisex" labels to align with standard cosmetic market segments.
 * **Geographical Coordinate Mapping:** Country of Origin names are enriched with absolute latitude and longitude coordinates to enable precise positioning of pulsing data points on the B2B world map.
 
 ---
