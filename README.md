@@ -41,7 +41,7 @@ The smart matching system driving the B2C "Best for you" recommendation carousel
 * **Cosine Similarity:** The user's input keyword or active ingredient search term is vectorized and compared against the ingredient vectors of existing products using cosine similarity metrics.
 * **Multi-Criteria Ranking Score:** Screened products that pass the initial hard filters (price, skin type) are ranked using the following custom scoring formula:
   `Score = (Cosine Similarity Score * 4.0) + (Customer Rating * 0.4) + (Cruelty-Free Bonus * 0.5) + (Budget Optimization Score * 0.1)`
-  This ensures that the user is presented with the 3 most compatible products, ranked by satisfaction ratings, value for money, animal-cruelty-free status, and ingredient match, displayed with a calculated compatibility percentage (e.g., 98% UYUM).
+  This ensures that the user is presented with the 3 most compatible products, ranked by satisfaction ratings, value for money, animal-cruelty-free status, and ingredient match, displayed with a calculated compatibility percentage.
 
 ---
 
