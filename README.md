@@ -35,7 +35,7 @@ To supply the B2C and B2B visual interfaces, high-value analytical dimensions ar
 
 ## AI Recommendation Engine
 
-The smart matching system driving the B2C "Sizin Icin En Iyiler" recommendation carousel is a hybrid algorithm combining hard filtering parameters with a multi-criteria weighted scoring model.
+The smart matching system driving the B2C "Best for you" recommendation carousel is a hybrid algorithm combining hard filtering parameters with a multi-criteria weighted scoring model.
 
 * **Text Vectorization (TF-IDF):** Product ingredient lists and primary actives are converted into mathematical vectors using Scikit-Learn's `TfidfVectorizer` class.
 * **Cosine Similarity:** The user's input keyword or active ingredient search term is vectorized and compared against the ingredient vectors of existing products using cosine similarity metrics.
