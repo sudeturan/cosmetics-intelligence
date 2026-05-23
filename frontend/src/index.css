@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-luxury-50: #FAF9F6;
+  --color-luxury-100: #F4F2EC;
+  --color-luxury-200: #E7E4D9;
+  --color-luxury-300: #D5D1C1;
+  --color-luxury-400: #BEB8A3;
+  --color-luxury-500: #9E967D;
+  --color-luxury-600: #81785E;
+  --color-luxury-700: #645B47;
+  --color-luxury-800: #464032;
+  --color-luxury-900: #2A261D;
+  --color-luxury-950: #14120D;
+  
+  --color-gold: #D4AF37;
+  --color-gold-light: #F3E5AB;
+  --color-gold-dark: #AA7C11;
+
+  --font-playfair: "Playfair Display", serif;
+  
+  --animate-fade-in: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-slide-up: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-pulse-subtle: pulseSubtle 2s infinite ease-in-out;
+
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.98); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  @keyframes slideUp {
+    0% { transform: translateY(16px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes pulseSubtle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.85; }
+  }
+}
+
+@utility font-playfair {
+  font-family: "Playfair Display", serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-luxury-50);
+    color: var(--color-luxury-950);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom premium scrollbar for modern browser UI feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F2EC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9E967D;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #81785E;
+}
+
+/* Luxury card micro-animations */
+.luxury-card-glow {
+  position: relative;
+}
+
+.luxury-card-glow::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(20,18,13,0.02));
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.luxury-card-glow:hover::after {
+  opacity: 1;
+}
